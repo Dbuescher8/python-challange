@@ -23,25 +23,19 @@ with open(file_path) as csvfile:
         print(str(Net_total_PL))
         date =row[0]
         profit = float(row[1])
-        if (profit > Greatest_Increase["amount"]):
-            Greatest_Increase[date] = date
-            Greatest_Increase[amount] = profit
-        if (profit < greatest_decrease["amount"]):
-            greatest_decrease["date"] = date
-            greatest_decrease["amount"] = profit
+    if (profit > Greatest_Increase["amount"]):
+            Greatest_Increase["date"] = date
+            Greatest_Increase["amount"] = profit
+    if (profit < Greatest_Decrease["amount"]):
+            Greatest_Decrease["date"] = date
+            Greatest_Decrease["amount"] = profit
 
 
 print("Financial Analysis")
 print("---------------------------")
-print(f"Total Months: {Month_total}"")
+print(f"Total Months: {Month_total}")
 print(
     f"Greatest Increase in Profits: {Greatest_Increase['date']} (${Greatest_Decrease['amount']})")
-
-
-
-
-
-
 
 
 out_file = "./Analysis/output.txt"
