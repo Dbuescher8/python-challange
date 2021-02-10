@@ -7,6 +7,10 @@
 
 vote_total = 0
 winner_votes = 0
+khan_votes = 0
+correy_votes = 0
+li_votes = 0
+otooley_votes = 0
 total_candidates = 0
 greatest_votes = ["", 0]
 candidate_options = []
@@ -14,6 +18,34 @@ candidate_votes = {}
 
 import csv
 file_path = "PyPoll/Resources/election_data.csv"
+
+
+
+
+# Print the summary table
+print(f"Election Results")
+print(f"----------------------------")
+print(f"Total Votes: {vote_total}")
+print(f"----------------------------")
+print(f"Khan: {khan_percent:.3f}% ({khan_votes})")
+print(f"Correy: {correy_percent:.3f}% ({correy_votes})")
+print(f"Li: {li_percent:.3f}% ({li_votes})")
+print(f"O'Tooley: {otooley_percent:.3f}% ({otooley_votes})")
+print(f"----------------------------")
+print(f"Winner: {key}")
+print(f"----------------------------")
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 #Election Results
