@@ -11,7 +11,10 @@ average_profit_loss =0.00
 Greatest_Increase = {}
 
 #The greatest decrease in losses (date and amount) over the entire period
-Greatest Decrease = {}
+Greatest decrease = {}
+
+import csv
+file_path = "./Resources/budget_data.csv"
 
 #result should look like this 
 #Financial Analysis
