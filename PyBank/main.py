@@ -1,16 +1,17 @@
 #The total number of months included in the dataset
-
-
+Month_total =0
 #The net total amount of "Profit/Losses" over the entire period
+Net_total_PL =0.00
 
 
 #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
-
+average_profit_loss =0.00
 
 #The greatest increase in profits (date and amount) over the entire period
-
+Greatest_Increase = {}
 
 #The greatest decrease in losses (date and amount) over the entire period
+Greatest Decrease = {}
 
 #result should look like this 
 #Financial Analysis
