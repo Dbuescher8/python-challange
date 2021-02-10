@@ -35,6 +35,11 @@ votes = [kkhan_votes, correy_votes,li_votes,otooley_votes ]
 dict_candidates_and_votes = dict(zip(candidates,votes))
 key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
 
+# Print a the summary of the analysis
+khan_percent = (khan_votes/total_votes) *100
+correy_percent = (correy_votes/total_votes) * 100
+li_percent = (li_votes/total_votes)* 100
+otooley_percent = (otooley_votes/total_votes) * 100
 
 
 # Print the summary table
