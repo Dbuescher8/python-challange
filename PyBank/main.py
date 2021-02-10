@@ -5,10 +5,10 @@ Net_total_PL = 0.00
 #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
 average_profit_loss = 0.00
 #The greatest increase in profits (date and amount) over the entire period
-Greatest_Increase = {}
+Greatest_Increase = {"date": "", "amount": 0}
 
 #The greatest decrease in losses (date and amount) over the entire period
-Greatest_Decrease = {}
+Greatest_Decrease = {"date": "", "amount": 0}
 
 import csv
 file_path = "./Resources/budget_data.csv"
@@ -20,7 +20,13 @@ with open(file_path) as csvfile:
         Month_total = Month_total +1
         print(Month_total)
         Net_total_PL = Net_total_PL + float(row[1])
-    print(str(Net_total_PL))
+        print(str(Net_total_PL))
+        average_profit_loss
+        moNum = float(row[1])
+        change = moNum - profit
+        moChanges.append(change)
+        chgProfits = chgProfits + change
+        profit = moNum
 
 
 
