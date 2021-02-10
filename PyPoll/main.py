@@ -19,27 +19,31 @@ candidate_votes = {}
 import csv
 file_path = "PyPoll/Resources/election_data.csv"
 
-
-    if row[2] == "Khan": 
+with open(file_path) as csvfile:
+    csvreader = csv.reader(csvfile)
+    csv_header = next(csvreader)
+    for row in csvreader: 
+        vote_total +=1 
+        if row[2] == "Khan": 
             khan_votes +=1
-    elif row[2] == "Correy":
+        elif row[2] == "Correy":
             correy_votes +=1
-    elif row[2] == "Li": 
+        elif row[2] == "Li": 
             li_votes +=1
-    elif row[2] == "O'Tooley":
+        elif row[2] == "O'Tooley":
             otooley_votes +=1
 
 candidate_options = ["Kahn", "Correy", "Li", "O'Tooley"]
-votes = [kkhan_votes, correy_votes,li_votes,otooley_votes ]
+votes = [khan_votes, correy_votes,li_votes,otooley_votes ]
 
-dict_candidates_and_votes = dict(zip(candidates,votes))
+dict_candidates_and_votes = dict(zip(candidate_options,votes))
 key = max(dict_candidates_and_votes, key=dict_candidates_and_votes.get)
 
 # Print a the summary of the analysis
-khan_percent = (khan_votes/total_votes) *100
-correy_percent = (correy_votes/total_votes) * 100
-li_percent = (li_votes/total_votes)* 100
-otooley_percent = (otooley_votes/total_votes) * 100
+khan_percent = (khan_votes/vote_total) *100
+correy_percent = (correy_votes/vote_total) * 100
+li_percent = (li_votes/vote_total)* 100
+otooley_percent = (otooley_votes/vote_total) * 100
 
 
 # Print the summary table
