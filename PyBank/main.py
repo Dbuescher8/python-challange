@@ -1,20 +1,28 @@
 #The total number of months included in the dataset
-Month_total =0
+Month_total = 0
 #The net total amount of "Profit/Losses" over the entire period
-Net_total_PL =0.00
-
-
+Net_total_PL = 0.00
 #Calculate the changes in "Profit/Losses" over the entire period, then find the average of those changes
-average_profit_loss =0.00
-
+average_profit_loss = 0.00
 #The greatest increase in profits (date and amount) over the entire period
 Greatest_Increase = {}
 
 #The greatest decrease in losses (date and amount) over the entire period
-Greatest decrease = {}
+Greatest_Decrease = {}
 
 import csv
 file_path = "./Resources/budget_data.csv"
+
+with open(file_path) as csvfile:
+    csvreader = csv.reader(csvfile)
+    csv_header = next(csvreader)
+    for row in csvreader:
+        Month_total = Month_total +1
+        print(Month_total)
+        Net_total_PL = Net_total_PL + float(row[1])
+    print(str(Net_total_PL))
+
+
 
 #result should look like this 
 #Financial Analysis
