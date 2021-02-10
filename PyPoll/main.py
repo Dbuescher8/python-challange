@@ -12,7 +12,8 @@ greatest_votes = ["", 0]
 candidate_options = []
 candidate_votes = {}
 
-
+import csv
+file_path = "PyPoll/Resources/election_data.csv"
 
 
 #Election Results
