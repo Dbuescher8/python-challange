@@ -44,10 +44,7 @@ with open(out_file, 'w') as outputFile:
     outputFile.write("----------------------------")
     outputFile.write(f"Total Months: {Month_total}")
     outputFile.write(f"Total: ${int(Net_total_PL)}")
-    outputFile.write(f"Average Change: ${str(round(avg_final,2))}")
-    outputFile.write(f"Greatest Increase in Profits: {incrDate} (${int(grIncr)})")
-    outputFile.write(f"Greatest Decrease in Losses: {decrDate} (${int(grDecr)})")
-    outputFile.write("----------------------------")
+    
 
 
 #result should look like this 
